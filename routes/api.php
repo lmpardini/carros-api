@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 /** Rotas VeiculosController */
 
 Route::prefix('veiculos')->controller(\App\Http\Controllers\VeiculosController::class)->group(function () {
-    Route::get('/', 'listarVeiculos');
-    Route::get('/find', 'buscarVeiculo');
-    Route::get('/{id}', 'listarVeiculosPorId');
-    Route::post('/', 'criarVeiculo');
-    Route::put('/{id}', 'editarVeiculoPorId');
-    Route::delete('/{id}', 'excluirVeiculoPorId');
+    Route::get('/', 'show');
+    Route::get('/find', 'find');
+    Route::get('/{id}', 'index');
+    Route::post('/', 'store');
+    Route::put('/{id}', 'update');
+    Route::delete('/{id}', 'destroy');
 
 });
