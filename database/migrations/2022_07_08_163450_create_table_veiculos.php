@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('veiculo');
             $table->string('marca');
             $table->integer('ano');
-            $table->integer('descricao')->nullable();
+            $table->text('descricao')->nullable();
             $table->boolean('vendido');
             $table->timestamps();
         });
