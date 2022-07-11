@@ -65,7 +65,6 @@ class VeiculosController extends Controller
             'veiculo' => 'required|string',
             'marca' => 'required|string',
             'ano' => 'required|integer',
-            'vendido' => 'required|boolean',
         ]);
 
         try {
@@ -76,7 +75,7 @@ class VeiculosController extends Controller
             $veiculo->marca = $request->marca;
             $veiculo->ano = $request->ano;
             $veiculo->descricao = $request->descricao;
-            $veiculo->vendido = $request->vendido;
+            $veiculo->vendido = false;
 
             $veiculo->save();
 
